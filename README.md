@@ -1,2 +1,2 @@
 # bot-rps-game
-This is simple bot that I created for rock, paper, and scissor game
+I put my heart, energy and mind into developing this bot. After that time, finally I have succeeded in developing a bot that can always win in rock, paper, scissor games. Do you dare to challenge my bot? 
