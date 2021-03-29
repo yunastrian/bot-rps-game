@@ -9,9 +9,9 @@ en:
         defeat: "You Lose! Try Again!"
 id:
     moves:
-        paper: gunting
+        paper: kertas
         rock: batu
-        scissor: kertas
+        scissor: gunting
     messages:
         input: "Pilih {moves}: "
         bot_pick: "Bot telah memilih: {bot_move}"
