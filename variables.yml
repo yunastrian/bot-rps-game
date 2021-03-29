@@ -1,0 +1,18 @@
+en:
+    moves:
+        paper: paper
+        rock: rock
+        scissor: scissor
+    messages:
+        input: "Choose {moves}: "
+        bot_pick: "Bot has choosen: {bot_move}"
+        defeat: "You Lose! Try Again!"
+id:
+    moves:
+        paper: gunting
+        rock: batu
+        scissor: kertas
+    messages:
+        input: "Pilih {moves}: "
+        bot_pick: "Bot telah memilih: {bot_move}"
+        defeat: "Anda kalah! Silakan coba kembali!"
