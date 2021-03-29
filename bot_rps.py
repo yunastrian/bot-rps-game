@@ -17,7 +17,7 @@ variables_file.close()
 supported_languages = variable_dict.keys()
 
 argv = sys.argv[1:]
-usage_message = ("Usage: python {filename} [OPTIONS]\n"
+usage_message = (f"Usage: python {__file__} [OPTIONS]\n"
                  "\n"
                  "Options:\n"
                  "-l, --language     Select the language of the game.\n"
