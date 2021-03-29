@@ -1,3 +1,5 @@
+import getopt
+import sys
 from typing import Dict
 import yaml
 
@@ -9,8 +11,36 @@ variables_filename = 'variables.yml'
 lang = 'en'
 
 variables_file = open(variables_filename, 'r')
-variable_dict = yaml.safe_load(variables_file)
+variable_dict: Dict = yaml.safe_load(variables_file)
 variables_file.close()
+
+supported_languages = variable_dict.keys()
+
+argv = sys.argv[1:]
+usage_message = ("Usage: python {filename} [OPTIONS]\n"
+                 "\n"
+                 "Options:\n"
+                 "-l, --language     Select the language of the game.\n"
+                 "                   The default is english.\n")
+
+try:
+    opts, args = getopt.getopt(argv, "hl:",
+                               ["help", "language ="])
+except Exception:
+    print('Invalid option\n')
+    print(usage_message)
+    sys.exit(2)
+
+for opt, arg in opts:
+    if opt in ("-h", "--help"):
+        print(usage_message)
+        sys.exit()
+    elif opt in ("-l", "--language"):
+        if arg not in supported_languages:
+            print(f"Invalid arguments for language: {arg}")
+            print(f'Supported languages: {", ".join(supported_languages)}')
+            sys.exit(3)
+        lang = arg
 
 variables: Dict = variable_dict[lang]
 
